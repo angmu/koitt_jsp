@@ -1,0 +1,8 @@
+섹션을 이용한 로그인하기 :>
+index,login_ok,login,logout
+
+에러페이지 대체>> 
+1. web.xml (<<여기다 지정하면 모든페이지에 적용됨)
+
+2.혹은 상단에 지정해서한다 (<%@page errorPage="error500.jsp" %>)
+main,main2,error500,error404

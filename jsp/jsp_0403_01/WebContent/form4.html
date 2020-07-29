@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check(){
+	if(form.age.value==""){
+		alert('나이를 넣어라요');
+		form.age.focus();
+		return false;
+	}
+	return form.submit();
+}
+</script>
+</head>
+<body>
+	<form name="form" method="post" action="ex0403_06.jsp">
+		성인인증<input type="text" name="age"><br>
+		<input type="button" onclick="check()" value="전송">
+		<input type="reset" value="취소">
+	</form>
+</body>
+</html>

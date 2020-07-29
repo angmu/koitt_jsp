@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+		table{font-size: 20px; border-collapse: collapse;text-align: center;}
+		tr,td{border-bottom: 1px solid black;}
+		td{height: 20px;}
+		td:nth-child(1) {
+			width:100px;
+		}td:nth-child(2) {
+			width:300px;
+		}
+		</style>
+		<script type="text/javascript">
+		function check(){
+			var start= parseInt(form.num1.value);
+			var end= parseInt(form.num2.value);
+			//글자수 범위를 지정안하면 오류뜬다리 '0'
+			num_ch= /^[0-9]{1,}$/;
+			if(form.num1.value==""){
+				alert('시작 숫자가 입력되지 않음');
+				form.num1.focus();
+				return false;
+			}
+			if(!(num_ch.test(form.num1.value))){
+				alert('숫자만 입력하세요');
+				form.num1.value="";
+				form.num1.focus();
+				return false;
+			}
+			if(form.num2.value==""){
+				alert('끝 숫자가 입력되지 않음');
+				form.num2.focus();
+				return false;
+			}
+			if(!(num_ch.test(form.num2.value))){
+				alert('숫자만 입력하세요');
+				form.num2.value="";
+				form.num2.focus();
+				return false;
+			}
+			if(start > end){
+				alert('시작 숫자는 끝 숫자보다 클수 없습니다.변경해주세오');
+				form.num1.focus();
+				return false;
+			}
+			return form.submit();
+		}
+		</script>	
+	</head>
+	
+	<body>
+		<form name="form" action="ex0403_01_prac3.jsp" method="get" onsubmit="return check()">
+			<p>범위</p>
+			<label for="num1">시작값</label><input type="text" name="num1" id="num1"><br>
+			<label for="num2">끝값</label><input type="text" name="num2" id="num2"><br>
+			<input type="submit" value="계산">
+		</form>
+	</body>
+</html>

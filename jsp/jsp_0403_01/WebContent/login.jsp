@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		function ch_1(){
+			if(form.id.value==""){
+				alert('아이디를 입력해주세오');
+				form.id.focus();
+				function ch_1(){
+					if(form.name.value==""){
+						alert('이름을 입력해주세오');
+						form.name.focus();
+						return false;
+					}
+					if(form.id.value==""){
+						alert('아이디를 입력해주세오');
+						form.id.focus();
+						return false;
+					}
+					if(form.pw.value==""){
+						alert('비밀번호를 입력해주세오');
+						form.pw.focus();
+						return false;
+					}
+					return form.submit();
+				}
+		</script>
+		<style type="text/css">
+		textarea{
+		border: none;}
+		</style>
+	</head>
+	
+	<body>
+		<%if(!(request.getParameter("id")==null)){
+			out.println(request.getParameter("id")+"가 잘못입력되었습니다<br>");
+		} %>
+		
+		<form action="check.jsp" method="post" name="form">
+		이름<input type="text" name="name"><br>
+		아이디<input type="text" name="id"><br>
+		패스워드<input type="password" name="pw"><br>
+		<input type="button" onclick="ch_1()" value="로그인">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+		table{font-size: 20px; border-collapse: collapse;text-align: center;}
+		tr,td{border-bottom: 1px solid black;}
+		td{height: 20px;}
+		td:nth-child(1) {
+			width:100px;
+		}td:nth-child(2) {
+			width:300px;
+		}
+		</style>
+		<script type="text/javascript">
+		function check(){
+			var kor= parseInt(form.kor.value);
+			var eng= parseInt(form.eng.value);
+			var math= parseInt(form.math.value);
+			num_ch= /^[0-9]{1,}$/;
+			name_ch= /^[가-힣]{1,}$/;
+			if((form.hak_num.value=="")||(form.name.value=="")||(form.kor.value=="")||(form.eng.value=="")||(form.math.value=="")){
+				alert('입력안된 항목이 있습니다.');
+				return false;
+			}
+			if(!(num_ch.test(form.hak_num.value))){
+				alert('학번은 숫자로만 입력해주세오');
+				return false;
+			}
+			if(!(name_ch.test(form.name.value))){
+				alert('이름은 한글로만 입력해주세오');
+				return false;
+			}
+			
+			if(!(num_ch.test(form.kor.value))){
+				alert('국어점수는 숫자로만 입력해주세오');
+				return false;
+			}
+			if(!(num_ch.test(form.eng.value))){
+				alert('영어점수는 숫자로만 입력해주세오');
+				return false;
+			}
+			if(!(num_ch.test(form.math.value))){
+				alert('수학점수는 숫자로만 입력해주세오');
+				return false;
+			}
+			if(!(kor>=0&&kor<=100)){
+				alert('점수는 0~100점까지 입력가능합니다');
+				form.kor.value="";
+				form.kor.focus();
+				return false;
+			}
+			if(!(eng>=0&&eng<=100)){
+				alert('점수는 0~100점까지 입력가능합니다');
+				form.eng.value="";
+				form.eng.focus();
+				return false;
+			}
+			if(!(math>=0&&math<=100)){
+				alert('점수는 0~100점까지 입력가능합니다');
+				form.math.value="";
+				form.math.focus();
+				return false;
+			}
+			return form.submit();
+		}
+		</script>	
+	</head>
+	
+	<body>
+		<form name="form" action="ex0403_01_prac4.jsp" method="get">
+			<p>학생정보</p>
+			<label for="hak_num">학번</label><input type="text" name="hak_num" id="hak_num" ><br>
+			<label for="name">이름</label><input type="text" name="name" id="name"><br>
+			<label for="kor">국어</label><input type="text" name="kor" id="kor"><br>
+			<label for="eng">영어</label><input type="text" name="eng" id="eng"><br>
+			<label for="math">수학</label><input type="text" name="math" id="math"><br>
+			<input type="button" onclick="check()" value="전송">
+		</form>
+	</body>
+</html>

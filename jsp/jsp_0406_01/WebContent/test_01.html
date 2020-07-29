@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		function check(){
+			var id_ch= /^[a-zA-Z](?=.*[a-zA-Z])(?=.*[0-9]).{3,}$/;
+			var name_ch= /^[가-힣]{1,}$/;
+			var pw_ch =/^[a-zA-Z]{5,}$/;
+			
+			if(form.id.value==""){
+				alert('아이디를 입력하세오');
+				form.id.focus();
+				return false;
+			}
+			if(!(id_ch.test(form.id.value))){
+				alert('아이디는 첫째자리는 영문으로,대소문자와 숫자가 각 1개이상 포함된 3자리 이상이어야 합니다');
+				form.id.focus();
+				return false;
+			}
+			
+			if(form.pw.value==""){
+				alert('비밀번호를 입력하세오');
+				form.pw.focus();
+				return false;
+			}
+			if(!(pw_ch.test(form.pw.value))){
+				alert('비밀번호는 5자리 이상이어야 합니다');
+				form.pw.value="";
+				return false;
+			}
+			if(form.name.value==""){
+				alert('이름을 입력하세오');
+				form.name.focus();
+				return false;
+			}
+			if(!(name_ch.test(form.name.value))){
+				alert('이름은 국문으로 입력해야 합니다');
+				form.name.value="";
+				return false;
+			}
+			
+			var chk = false;
+			 for(var i =0; i<form.hobby.length; i++){
+			     if(form.hobby[i].checked){  
+			         chk = true; 
+			     }
+			 }
+			 if(!chk){
+			     alert('취미가 체크되어 있지 않습니다. 확인해주세요.');
+			     form.hobby[0].checked=true;
+			  return false;
+			 }
+			
+			if(form.gender.value==""){
+				alert('성별을  선택하세오');
+				form.gender.value="man";
+				return false;
+			}
+			
+			
+			return form.submit();
+			
+		}
+		
+		
+		
+		</script>
+	</head>
+	
+	
+	<body>
+		<form action="ex0406_01.jsp" method="post" name="form">
+			id: <input type="text" name="id"><br>
+			password: <input type="password" name="pw"><br>
+			이름: <input type="text" name="name"><br>
+			<p>취미</p>
+			<input type="checkbox" name="hobby" value="cook"> 요리
+			<input type="checkbox" name="hobby" value="run"> 조깅
+			<input type="checkbox" name="hobby" value="book"> 독서<br>
+			<p>성별</p>
+			<input type="radio" name="gender" value="man"> 남
+			<input type="radio" name="gender" value="woman"> 여<br>
+			
+			<input type="button" onclick="check()" value="전송"> 
+			<input type="reset" value="취소"> 
+		</form>
+	</body>
+</html>
