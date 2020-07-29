@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date객체</title>
+	</head>
+	<body>
+		<p id="date1"></p>
+		<p id="year"></p>
+		<p id="month"></p>
+		<p id="date"></p>
+		<p id="day"></p>
+		<p id="hour"></p>
+		<p id="minute"></p>
+		<p id="second"></p>
+		<p id="msecond"></p>
+		
+		<script type="text/javascript">
+			//Date() >>유저의 컴퓨터 시간을 가져옴
+			var today=new Date();
+			var day1;
+			switch(today.getDay()){
+			case 0:
+				day1="일";
+				break;
+			case 1:
+				day1="월";
+				break;
+			case 2:
+				day1="화";
+				break;
+			case 3:
+				day1="수";
+				break;
+			case 4:
+				day1="목";
+				break;
+			case 5:
+				day1="금";
+				break;
+			case 6:
+				day1="토";
+				break;
+			default:
+				break;
+			}
+			
+			document.getElementById('date1').innerHTML=today;
+			document.getElementById('year').innerHTML=today.getFullYear()+"년";
+			//월은 0부터 시작해서 원하는 월을 받고싶다면 1을 더해야함
+			document.getElementById('month').innerHTML=today.getMonth()+1+"월";
+			document.getElementById('date').innerHTML=today.getDate()+"일";
+			document.getElementById('day').innerHTML=day1+"요일";
+			document.getElementById('hour').innerHTML=today.getHours()+"시";
+			document.getElementById('minute').textContent=today.getMinutes()+"분";
+			document.getElementById('second').textContent=today.getSeconds()+"초";
+			//이건 왜 안되는걸까..ㅇ,ㅇ,,, getMillisecond 대신 getTime()은 먹혓다..ㅇ.ㅇ...
+			document.getElementById('msecond').innerHTML=today.getTime()+"초(밀리세컨드)";
+		</script>
+	</body>
+</html>

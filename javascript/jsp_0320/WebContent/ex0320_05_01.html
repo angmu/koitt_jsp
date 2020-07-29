@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/custom2.js"></script>
+	</head>
+	<body>
+	<!-- 1.form action="login_ok.html"
+			2.input>아이디입력창
+			3.input>패스워드입력창
+			4.스크립트 function check()
+			5.아이디!=admin 아이디를 잘못입력. 리턴.
+			6.비번 !=12345 비번잘못입력. 리턴.
+			7.return form.submit();
+	
+	 -->
+		<p>로그인하기</p>
+		<form name="form" method="get" action="login_ok.html">
+		 	<label>아이디</label><input type="text" name="id">
+		 	<label>비밀번호</label><input type="password" name="pw">
+			<input type="button" onclick="check()" value="로그인">	
+			
+		</form>
+		
+	</body>
+</html>

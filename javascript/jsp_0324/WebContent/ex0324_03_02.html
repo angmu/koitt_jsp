@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var text1="함수선언전 호출에러";
+		var text2="함수선언전 호출만 가능";
+		
+		//printMsg(text1); > 무명함수는 함수의 호출전에 쓰여질수 없다(변수에 함수가 없어서 제대로 출력하지못함)
+		//같은 이름의 함수를 쓸수있음(무명함수가 먼저 호출됨)
+		
+		var printMsg= function(msg){
+			document.write('함수호출메세지 :'+msg+'<br>');
+		}
+		//printMsg(text2); 
+		
+	</script>
+</body>
+</html>

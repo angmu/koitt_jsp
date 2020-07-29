@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>p407 웹프로그래밍 책</title>
+		<style>
+		p{width:400px;height: 200px; border:1px solid black;
+		margin: 20px; text-align: center; font-size:20px;
+		padding:100px; box-sizing:border-box;
+		color:red;}
+		</style>
+	</head>
+	<body>
+		<p id="var1"></p>
+		<p id="var2"></p>
+		<p id="var3"></p>
+		<script type="text/javascript">
+		var car={
+				name:'sonata',
+				speed:100,
+				color:'white',
+				
+				m1:function(){
+					return this.name;
+				},
+				m2:function(a){
+					result=this.speed+a;
+					return result;
+				},
+				m3:function(a,b){
+					name=this.m1();
+					result=this.m2(a)+b;
+// 					result=this.speed+a+b;
+					return name+":"+result;
+				}
+			};
+		
+
+			document.getElementById("var1").innerHTML=car.m1();
+			document.getElementById("var2").innerHTML=car.m2(50);
+			document.getElementById("var3").innerHTML=car.m3(50,100);	
+		
+		
+// 				document.getElementById("var1").innerHTML="자동차이름:"+car.name;
+// 				document.getElementById("var2").innerHTML="자동차속도:"+car.speed;
+// 				document.getElementById("var3").textContent="자동차색상:"+car.color;
+		
+		</script>
+	</body>
+</html>

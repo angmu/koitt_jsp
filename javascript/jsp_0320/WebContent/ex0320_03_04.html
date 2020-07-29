@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		//입력값으로 변경>>실습 3개숫자비교	제일 큰값구하기
+		var x=prompt('1번째 숫자를 입력하세오');
+		var y=prompt('2번째 숫자를 입력하세오');
+		var z=prompt('3번째 숫자를 입력하세오');
+		document.write(typeof x+"<br>");//string
+		x=parseInt(x);
+		document.write(typeof x+"<br>");//number
+		y=parseInt(y);
+		z=parseInt(z);
+		
+		var max=(x>y&&x>z)?x:(y>z)?y:z;
+		var min=(x<y&&x<z)?x:(y<z)?y:z;
+		
+		
+		var result;
+		result=(x>y)? ((x>z)? x:z):((y>z)? y:z);
+		document.write("1번째 숫자는 "+x+"입니다."+"<br>");
+		document.write("2번째 숫자는 "+y+"입니다."+"<br>");
+		document.write("3번째 숫자는 "+z+"입니다."+"<br>");
+		
+		document.write("큰 값은 "+result+"입니다."+"<br>");
+		document.write("큰 값은 "+max+"입니다."+"<br>");
+		document.write("큰 값은 "+min+"입니다."+"<br>");
+		
+		
+		
+		
+		//입력값으로 변경	
+	//	var x=prompt('1번째 숫자를 입력하세오');
+	//	var y=prompt('2번째 숫자를 입력하세오');
+	//	var result;
+	//	result=(x>y)?x:y;
+	//	document.write("큰 값은 "+result+"입니다."+"<br>");
+	//	result=(x>y)?x-y:y-x;
+	//	document.write("큰값에서 작은값을 뺀 결과는 "+result+"입니다."+"<br>");
+	
+		
+		
+			//삼항식
+	//		var x=5;
+		//	var y=7;
+		//var result;
+	//		result=(x>y)?x:y;
+	//		document.write("큰 값은 "+result+"입니다."+"<br>");
+	//		result=(x>y)?x-y:y-x;
+	//		document.write("큰값에서 작은값을 뺀 결과는 "+result+"입니다."+"<br>");
+			
+		
+		
+			//절대값을 구하는 스크립트
+		//	var x=prompt('숫자를 입력하세오');
+		//	var result=(x>-x)? x:-x; //절대값
+		//	document.write("x의 절대값:"+result);
+		</script>
+	</body>
+</html>

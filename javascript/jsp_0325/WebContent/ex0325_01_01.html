@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>로또번호 넣기</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/custom.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var lotto=[];
+			var i=0;
+			//로또를 넣는 함수
+			function insertNum(){
+				//번호삽입
+				for(i=0;i<45;i++){
+					lotto[i]=i+1;
+				}
+// 				//번호출력(모든번호 1~45)
+// 				for(i=0;lotto.length;i++){
+// 					document.write(lotto[i]+" ");
+// 					if((i+1)%5==0){
+// 						document.write('<br>');
+// 					}
+// 				}
+// 				document.write('배열의 크기: '+lotto.length+"<br>");
+			}
+			//로또 번호의 데이터값을 0으로 만드는 함수
+			function delNum(){
+				for(i=0;i<lotto.length;i++){
+					lotto[i]=0;
+				}
+				printNum();
+			}
+			//배열의 값을 출력
+			function printNum(){
+				for(i=0;i<lotto.length;i++){
+					document.write(lotto[i]+' ');
+					if((i+1)%5==0){
+						document.write('<br>');
+					}
+				}
+				document.write('<br>배열의 크기:'+lotto.length+'<br>');
+				document.write('<a href="ex0325_01_01.html">돌아가기</a>');
+			}
+			//3의 배수출력
+			function printNum3(){
+				for(i=0;i<lotto.length;i++){
+					if(lotto[i]%3==0){
+						document.write(lotto[i]+" ");
+					}
+					continue;
+				}
+				document.write("<a href='ex0325_01_01.html'>돌아가기</a>");
+			}
+			//5의 배수 합계
+			function sumNum5(){
+				var sum=0;
+				for(i=0;i<lotto.length;i++){
+					if(lotto[i]%5==0){
+						sum+=lotto[i];
+						document.write(lotto[i]+' ');
+					}
+					continue;
+				}
+				document.write('<br>5의 배수의 합계:'+sum);
+				document.write("<a href='ex0325_01_01.html'>돌아가기</a>");
+			}
+			
+			insertNum();
+		</script>
+		<button onclick="printNum()">로또번호넣기</button><br>
+		<button onclick="delNum()">번호삭제</button><br>
+		<button onclick="printNum3()">3의배수 출력</button><br>
+		<button onclick="sumNum5()">5의배수 합계</button>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			
+				//var x=5;
+				////****prompt >입력받을 창을 생성. 값을 입력받아 변수에 저장한다.
+				//var x=prompt('숫자를 입력하세요.');
+				//if(x>=0&&x<=10){
+				//	document.write('x는 0과 10 사이의 수 입니다'+"<br>");
+				//}else{
+				//	document.write('x는 0보다 작거나 10보다 큰 수 입니다'+"<br>");
+				//}
+			
+					//연산자
+				//	var x=5;
+				//	var y="5";
+				//	var result;
+					//x가 y보다 크냐
+					//result=(x>y);
+					//document.write('x>y:'+result+"<br>");
+					//값이 같냐
+				//	result=(x==y);
+				//	document.write("x==y:"+result+"<br>");
+					////값도같고 타입도 같냐
+					//result=(x===y);
+					//document.write("x===y:"+result+"<br>");
+					////값이같지않냐
+					//result=(x!=y);
+					//document.write("x!=y:"+result+"<br>");
+					////값이나 타입이 같지않냐 (둘중하나)
+					//result=(x!==y);
+				//	document.write("x!==y:"+result+"<br>");
+				
+				function check(){
+					//form의 값이 빈공백인지 확인
+					if(form_1.id.value==""){
+						alert('아이디를 입력해주세오');
+						form.id.focus;
+						return false;
+					}
+					//나이 체크 (한글은 기본 2자로 인식된다우...) >>먹통
+					if(form_1.age.value>=18){
+						alert('성인입니다');
+					}
+					else{
+						alert('미성년자입니다');
+					}
+					
+					//아이디 길이 체크 (한글은 기본 2자로 인식된다우...) >>먹통
+					if(form_1.id.value<8){
+						alert('4글자 이상 입력해주세오');
+						form.id.focus;
+						return false;
+					}
+					
+					
+					if(form_1.id.value==""||form_1.major.value==""){
+						alert('빈칸을 채워주세오');
+						form.id.focus;
+						return false;
+					}
+				}
+				
+		</script>
+		<form name="form_1" method="get" action="">
+			<label for="id">이름: </label><input type="text" name="id" id="id"><br>
+			<label for="age">나이: </label><input type="text" name="age" id="age"><br>
+			<label for="major">학과: </label><input type="text" name="major" id="major"><br>
+		    <label for="kor">국어점수: </label><input type="text" name="kor" id="kor">
+			<input type="button" value="성적입력" onclick="check()">		
+		</form>
+		
+		
+	</body>
+</html>

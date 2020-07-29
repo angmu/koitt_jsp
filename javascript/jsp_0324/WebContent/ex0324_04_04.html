@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열인지 확인</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var city=new Array("서울","인천","부산");
+			function printArr(){
+				if(city instanceof Array){
+					document.write('배열이 맞습니다<br>');
+					var i;
+					for(i=0;i<city.length;i++){
+					document.write('배열데이터 ['+i+'] '+city[i]+'<br>');
+					}
+					
+				}else{
+					document.write('배열이아닙니다.<br>');
+					document.write('데이터값:'+city+'<br>');				
+					
+				}
+			}
+			printArr();
+			
+			document.write('city typeof 변수타입 비교:'+typeof city+'<br>');
+			document.write('city isArray 변수타입 비교:'+Array.isArray(city)+'<br>');				
+	
+		</script>
+	</body>
+</html>

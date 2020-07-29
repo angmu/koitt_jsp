@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단 2의 배수 단만 출력</title>
+</head>
+<body>
+	<script type="text/javascript">
+		for (var num = 2; num < 10; num++) {
+			if (num % 2 != 0) {
+				continue;
+			}
+			document.write('[' + num + '단]<br>');
+			for (var num2 = 1; num2 < 10; num2++) {
+				document.write(num + '*' + num2 + '=' + num * num2 + "<br>");
+			}
+			document.write('--------------------<br>');
+		}
+	</script>
+</body>
+</html>

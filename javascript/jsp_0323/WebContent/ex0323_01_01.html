@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<form name="login" action="" method="get">
+			<label>성별</label><br>
+			<input type="radio" name="gender" value="m"><label for="m" >남자</label>&nbsp;
+			<input type="radio" name="gender" value="f"><label for="f">여자</label><br>
+			
+			<label>나이</label><input type="text" name="age"><br>
+			<label>아이디</label><input type="text" name="id" autofocus="autofocus"><br>
+			<label>비밀번호</label><input type="password" name="pw"><br>
+			<!--<input type="submit"> 이건 비교안하고 바로 보낸다.. -->
+			<input type="button" value="전송" onclick="check()"> <input type="reset" value="취소">
+		</form>
+	</body>
+</html>

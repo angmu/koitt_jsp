@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>filter()+indexOf</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//k-국문학과 , e-영문학과, m- 수학과, c- 컴퓨터공학과
+			var stu_num= ["k202001","k202002","e202001","e202002","m202001","m202002","c202001","c202002","k202003","k202004"];
+			//컴퓨터학과 찾는 함수
+			function com_Arr(value){
+				//s가없으면 -1을 반환, 있으면 자리index를 반환  >>indexOf("s")
+				if(value.indexOf("c")!=-1){
+					return value; 
+				}
+			}
+			//버튼용 배열분리
+			function div_arr(){
+				var new_data = stu_num.filter(com_Arr);
+				document.write("필터전 배열: "+stu_num+"<br>");
+				document.write("필터후 배열: "+new_data+"<br>");
+				document.write("<a href='ex0325_02_05.html'>돌아가기</a>");
+			}
+		</script>
+		<button onclick="div_arr()">컴퓨터 학과</button>
+	</body>
+</html>

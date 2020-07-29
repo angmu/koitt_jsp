@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>학번이름객체실습</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+	<!-- table 학번,이름,국어,영어, 합계,평균>> 합계&평균>함수구성 -->
+	<!-- 1 홍길동  100 80-->
+	<!-- 2 강감찬  99 87-->
+	<!-- 3 유관순 100 99 -->
+		<table>
+			<tr>
+				<td>학번</td>
+				<td>이름</td>
+				<td>국어점수</td>
+				<td>영어점수</td>
+				<td>합계</td>
+				<td>평균</td>
+			</tr>
+			<tr>
+				<td id="haknum1"></td>
+				<td id="hakname1"></td>
+				<td id="kor1"></td>
+				<td id="eng1"></td>
+				<td id="total1"></td>
+				<td id="avg1"></td>
+			</tr>
+			<tr>
+				<td id="haknum2"></td>
+				<td id="hakname2"></td>
+				<td id="kor2"></td>
+				<td id="eng2"></td>
+				<td id="total2"></td>
+				<td id="avg2"></td>
+			</tr>
+			<tr>
+				<td id="haknum3"></td>
+				<td id="hakname3"></td>
+				<td id="kor3"></td>
+				<td id="eng3"></td>
+				<td id="total3"></td>
+				<td id="avg3"></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			function Hak(hak_num,name,kor,eng){
+				this.hak_num=hak_num;
+				this.name=name;
+				this.kor=kor;
+				this.eng=eng;
+				this.total=total(this.kor,this.eng);
+				this.avg=avg(this.total);
+			}
+			function total(a,b){
+				var result=a+b;
+				return result;
+			}
+			function avg(a){
+				var result=a/2;
+				return result;
+			}
+			
+			var hong=new Hak('1','홍길동',100,80);
+			var kang=new Hak('2','강감찬',99,87);
+			var yu=new Hak('3','유관순',100,99);
+			
+			var haknum_1=document.getElementById('haknum1');
+			haknum_1.textContent=hong.hak_num;
+			var hakname_1=document.getElementById('hakname1');
+			hakname_1.textContent=hong.name;
+			var hakkor_1=document.getElementById('kor1');
+			hakkor_1.textContent=hong.kor;
+			var hakeng_1=document.getElementById('eng1');
+			hakeng_1.textContent=hong.eng;
+			var haktotal_1=document.getElementById('total1');
+			haktotal_1.textContent=hong.total;
+			var hakavg_1=document.getElementById('avg1');
+			hakavg_1.textContent=hong.avg;
+			
+			var haknum_2=document.getElementById('haknum2');
+			haknum_2.textContent=kang.hak_num;
+			var hakname_2=document.getElementById('hakname2');
+			hakname_2.textContent=kang.name;
+			var hakkor_2=document.getElementById('kor2');
+			hakkor_2.textContent=kang.kor;
+			var hakeng_2=document.getElementById('eng2');
+			hakeng_2.textContent=kang.eng;
+			var haktotal_2=document.getElementById('total2');
+			haktotal_2.textContent=kang.total;
+			var hakavg_2=document.getElementById('avg2');
+			hakavg_2.textContent=hong.avg;
+			
+			var haknum_3=document.getElementById('haknum3');
+			haknum_3.textContent=yu.hak_num;
+			var hakname_3=document.getElementById('hakname3');
+			hakname_3.textContent=yu.name;
+			var hakkor_3=document.getElementById('kor3');
+			hakkor_3.textContent=yu.kor;
+			var hakeng_3=document.getElementById('eng3');
+			hakeng_3.textContent=yu.eng;
+			var haktotal_3=document.getElementById('total3');
+			haktotal_3.textContent=yu.total;
+			var hakavg_3=document.getElementById('avg3');
+			hakavg_3.textContent=hong.avg;
+			
+		</script>
+	
+	
+	
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열안에 값이 없을 경우 빼고 계산</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var com=[95,88,,72,68,,99,78,87];//값이 안들어간곳은 undefined로 나타남 
+			var getAvg;
+			function printArr(){
+				var i=0;
+				var sum=0;
+				var count=0;
+				for(i=0;i<com.length;i++){
+					if(com[i]===undefined){
+						continue;
+					}
+					sum+=com[i];				
+					count++;
+				}
+				getAvg=sum/count;
+				document.write("배열개수:"+com.length+'<br>');
+				document.write("학생수:"+count+'<br>');
+				document.write("배열합계:"+sum+'<br>');
+				document.write("배열평균:"+getAvg+'<br>');
+			}printArr();
+		
+		</script>
+	</body>
+</html>

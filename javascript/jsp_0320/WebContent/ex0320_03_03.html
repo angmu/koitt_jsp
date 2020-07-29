@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check(){
+	if(form3.name.value==""){
+		alert('이름을 입력해주세요');
+		form3.name.focus();
+		return false;
+	}if(form3.name.value.length<3){
+		alert('이름은 3글자 이상 입력해주세오');
+		//데이터초기화
+		form3.name.value="";
+		form3.name.focus();
+		return false;
+	}
+	if((form3.kor.value>100||form3.eng.value>100)){
+		alert('점수는 100점까지만 입력가능합니다.');
+		//데이터초기화
+		form3.kor.value="";
+		form3.kor.focus();
+		return false;
+	}else{
+		//form3.kor.focus();
+	}
+	
+}
+
+</script>
+</head>
+<body>
+	<form method="get" name="form3" action="">
+		<label>학생이름</label><input type="text" name="name"><br>
+		<label>국어점수</label><input type="text" name="kor"><br>
+		<label>영어점수</label><input type="text" name="eng"><br>
+		<label>합계</label><input type="text" name="total" disabled="disabled"><br>
+		<input type="button" onclick="check()" value="데이터입력"><br>
+	</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>시간호출하기-setTimeout</title>
+	</head>
+	<body>
+		<p id="digClock"></p>
+		<script type="text/javascript">
+			function digClock(){
+				var today=new Date();
+				var time=today.getHours()+"시 "+today.getMinutes()+"분 "+today.getSeconds()+"초";
+				document.getElementById('digClock').innerHTML=time;
+				setTimeout('digClock()',1000); //digClock()을 1초마다 호출해라
+			}
+			digClock();
+		</script>
+	</body>
+</html>

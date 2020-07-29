@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/custom3.js"></script>
+		<style>
+		label{display: inline-block; width:100px;height: 30px;}
+		</style>
+	</head>
+	<body>
+		<!-- form
+		아이디 패스워드 패스워드확인 이름 나이 전화번호
+		성별추가
+		아이디-소문자 대문자 가능:4~12
+		패스워드와 패스워드 확인이 같은지 비교> 다르면 패스워드 포커스
+		패스워드>소문자, 숫자, 특수문자 가능
+		이름>한글만(1글자이상)
+		나이>숫자만 1~3까지
+		전화번호 숫자만가능>8자리 이상 -->
+		<form action="" name="form" method="get">
+			<label for="m_id">아이디</label><input type="text" name="m_id" id="m_id"><br>
+			<label for="m_pw">패스워드</label><input type="password" name="m_pw" id="m_pw"><br>
+			<label for="m_pw2">패스워드확인</label><input type="password" name="m_pw2"><br>
+			<label for="m_name">이름</label><input type="text" name="m_name" id="m_name"><br>
+			<label for="m_age">나이</label><input type="text" name="m_age" id="m_age"><br>
+			<label>성별</label><br>
+			<input type="radio" name="m_gender" value="m"><label>남자</label>&nbsp;
+			<input type="radio" name="m_gender" value="f"><label>여자</label><br>
+			<label for="m_tel">전화번호</label><input type="text" name="m_tel" id="m_tel"><br>
+			<label>취미</label><br>
+			<input type="checkbox" name="hobby" value="reading"><label>독서</label>&nbsp;
+			<input type="checkbox" name="hobby" value="game"><label>게임</label>&nbsp;
+			<input type="checkbox" name="hobby" value="swimming"><label>수영</label>&nbsp;
+			<input type="checkbox" name="hobby" value="bicycle"><label>자전거</label>&nbsp;
+			<input type="checkbox" name="hobby" value="mountain"><label>등산</label>&nbsp;
+			<label>기타</label><input type="text" name="hobby"><br>
+			<input type="button" onclick="check()" value="전송"><input type="reset"value="입력취소">
+		</form>
+	</body>
+</html>

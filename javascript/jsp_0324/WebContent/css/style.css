@@ -1,0 +1,10 @@
+@charset "UTF-8";
+form{
+	width:1000px; font-size:24px;
+}
+label{
+	width:100px;
+}
+input{
+	margin: 10px;
+}

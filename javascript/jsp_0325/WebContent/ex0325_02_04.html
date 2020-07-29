@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>filter()</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var data= [43,12,10,78,60,55,96,45,35,28];
+			function filterArr(value){
+				return value>= 18; //값이 조건보다 큰값만 반환해서 배열에 넣음
+			}
+			var new_data = data.filter(filterArr);
+			document.write("필터전 배열: "+data+"<br>");
+			document.write("필터후 배열: "+new_data+"<br>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자릿수가 다른 숫자를 받아서 각 자리의 숫자들의 합과 곱을 구함</title>
+	<script type="text/javascript">
+		//form 
+		//숫자1,2, 3,4 자리
+		//이름 (국문가능 1자리이상)
+		//함수로 add.multi
+		//4r개숫자 더한값, 결과값.
+		function add(num){
+			var i,sum=0;
+			for(i=0;i<num.length;i++){
+				sum+=num.charAt(i)-'0';
+			}
+			document.write('숫자'+num.length+'의 자릿수를 더한 결과값:'+sum+"<br>");
+		}
+		function multi(num){
+			var i=0;
+			var result=1;
+			for(i=0;i<num.length;i++){
+				result*=num.charAt(i)-'0';
+			}
+			document.write('숫자'+num.length+'의 자릿수를 곱한 결과값:'+result+"<br>");
+		}
+		function check(){
+			var name_ch= /^[가-힣]{1,}$/;
+			var num_ch1= /^[0-9]{1,1}$/;
+			var num_ch2= /^[0-9]{2,2}$/;
+			var num_ch3= /^[0-9]{3,3}$/;
+			var num_ch4= /^[0-9]{4,4}$/;
+			if(form.f_name.value==""){
+				alert('이름을 입력해주세오');
+				form.f_name.focus();
+				return false;
+			}
+			if(!(name_ch.test(form.f_name.value))){
+				alert('이름은 국문으로 1글자 이상 입력되어야 합니다');
+				form.f_name.focus();
+				return false;
+			}
+			if(form.f_num1.value==""){
+				alert('숫자 1을 입력해주세오');
+				form.f_num1.focus();
+				return false;
+			}
+			if(!(num_ch1.test(form.f_num1.value))){
+				alert('숫자 1은 1자리의숫자만 입력가능합니다');
+				form.f_num1.focus();
+				return false;
+			}
+			if(form.f_num2.value==""){
+				alert('숫자 2을 입력해주세오');
+				form.f_num2.focus();
+				return false;
+			}
+			if(!(num_ch2.test(form.f_num2.value))){
+				alert('숫자 2은 2자리의숫자만 입력가능합니다');
+				form.f_num2.focus();
+				return false;
+			}
+			if(form.f_num3.value==""){
+				alert('숫자 3을 입력해주세오');
+				form.f_num3.focus();
+				return false;
+			}
+			if(!(num_ch3.test(form.f_num3.value))){
+				alert('숫자 3은 3자리의숫자만 입력가능합니다');
+				form.f_num3.focus();
+				return false;
+			}
+			if(form.f_num4.value==""){
+				alert('숫자 4을 입력해주세오');
+				form.f_num4.focus();
+				return false;
+			}
+			if(!(num_ch4.test(form.f_num4.value))){
+				alert('숫자 4은 4자리의숫자만 입력가능합니다');
+				form.f_num4.focus();
+				return false;
+			}
+			var num1=form.f_num1.value;
+			var num2=form.f_num2.value;
+			var num3=form.f_num3.value;
+			var num4=form.f_num4.value;
+			
+			add(num1);
+			add(num2);
+			add(num3);
+			add(num4);
+			
+			multi(num1);
+			multi(num2);
+			multi(num3);
+			multi(num4);
+			
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<form name="form" method="get" action="">
+		<label>이름</label><input type="text" name="f_name" placeholder="홍길동"><br>
+		<label>숫자1</label><input type="text" name="f_num1" placeholder="1자리숫자를 입력"><br>
+		<label>숫자2</label><input type="text" name="f_num2" placeholder="2자리숫자를 입력"><br>
+		<label>숫자3</label><input type="text" name="f_num3" placeholder="3자리숫자를 입력"><br>
+		<label>숫자4</label><input type="text" name="f_num4" placeholder="4자리숫자를 입력"><br>
+		<input type="button" onclick="check()" value="결과값출력"> <input type="reset" value="취소"><br>
+	</form>
+
+
+
+</body>
+</html>

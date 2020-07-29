@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>매개변수를 사용한 함수만들기</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//10.150까지의 더하기
+	//두수를 받아서 곱하기 리턴
+		var result;
+		function add2(name,n1,n2){
+			//두수를 비교해서 큰수가 for문 뒤의 숫자에 오도록 해야함.
+			document.write('name학생이'+n1+'부터'+n2+'까지 덧셈 수행<br>");
+			var sum=0;
+			for(var i=n1;i<=n2;i++){
+				sum+=i;
+			}
+			return sum;
+		}	
+		
+		function mul(n1,n2){
+			document.write(n1+'과(와) '+n2+'의 곱하기<br>');
+			return n1*n2;
+		}
+		//유저가 입력해서 유저쪽에서 처리할수 있게 한것>>자바스크립트..'0' (서버에서 처리하는거보다 속도면에서 월등하게 빠르다..)
+		result=add2('홍길동',10,150);
+		document.write('결과 값:'+result+'<br>');
+		result=mul(2,4);
+		document.write('결과 값:'+result+'<br>');
+	</script>
+</body>
+</html>

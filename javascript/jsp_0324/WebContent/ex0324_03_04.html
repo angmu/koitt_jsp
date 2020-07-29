@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수를 var에 넣을수도 잇다</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function add(x,y){
+			return x+y;
+		}	
+		var a1=add;
+		var a2=add;
+		//유저가 입력해서 유저쪽에서 처리할수 있게 한것>>자바스크립트..'0' (서버에서 처리하는거보다 속도면에서 월등하게 빠르다..)
+		document.write(a1(10,11)+'<br>');
+		document.write(a2(10,12));
+	</script>
+</body>
+</html>
