@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/****header****/
+#top {
+	background: no-repeat url('../images/top_back.png') center;
+	margin-top: 0;
+	width: 100%;
+	height: 80px;
+}
+
+#header_box {
+	width: 1000px;
+	height: 93px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 30px 50px;
+	font-weight: 300;
+}
+
+header img {
+	float: left;
+	margin-left: 15px;
+}
+
+header img:nth-child(1) {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+header form {
+	width: 400px;
+	float: left;
+	margin: -5px 57px;
+}
+
+input {
+	width: 370px;
+	height: 40px;
+	border: none;
+	box-sizing: border-box;
+	border-bottom: 2px solid black;
+	font-size: 16px;
+	float: left;
+}
+
+button {
+	padding: none;
+	margin-left: -30px;
+	margin-top: 5px;
+	background: none;
+	border-style: none;
+	background: url("../images/ico-header-search.svg") center no-repeat;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+/**nav**/
+nav>div {
+	width: 100%;
+	font-weight: 700;
+	height: 58px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ul li {
+	font-size: 18px;
+	float: left;
+	width: 166px;
+	height: 58px;
+	padding: 14px 0 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+ul li a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+ul li a:hover {
+	border-bottom: 4px solid black;
+}
+/*section**/
+section>div:nth-child(1) {
+	width: 100%;
+	height: 120px;
+	background: url("../images/event.png") no-repeat center;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+section>div:nth-child(1)>p {
+	width: 1000px;
+	margin: 0 auto;
+	line-height: 120px;
+	color: white;
+}
+/*서브메뉴탭*/
+section>div:nth-child(2) {
+	margin-top: 50px;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	/*배경을 깔고 고정을해두면 스크롤시에 이미지가 움직인다
+			background: url("../images/home_office.jpg") no-repeat fixed left top;*/
+}
+section >div:nth-child(2)>ul{ 
+	width:500px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+section>div:nth-child(2)>ul>li {
+	width: 240px;
+	height: 70px;
+	font-size: 24px;
+	font-weight: bold;
+	border-bottom: 3px solid #e5e5e5;
+}
+
+
+section>div:nth-child(2)>ul>li:first-child {
+	margin-right: 20px;
+}
+section>div:nth-child(2)>ul>li:hover {
+	border-bottom: 5px solid black;
+}
+
+section>div:nth-child(2)>ul>li>a:hover {
+	border-bottom: none;
+}
+
+#list01 {
+	width: 100%;
+}
+#list01>ul{
+	width:1150px; margin: 0 auto;
+}
+#list01>ul>li{
+	width:1150px;
+	height: 412px;
+}
+#list01>ul>li>a>div{
+	width:575px;
+	height:412px;
+	float: left;
+}
+#list01>ul>li>a>div>.ev_box{
+	background-image: url("../images/event_01.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+}

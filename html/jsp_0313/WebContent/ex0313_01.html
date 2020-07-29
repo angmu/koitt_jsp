@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		div {padding:30px; border:5px solid pink;
+		background-image:url("images/b_01.jpg");
+		background-repeat:repeat;
+		background-size:10%;
+		width:1000px;
+		/*background: yellow;*/
+		/**/
+		background-clip:padding-box;/*content-box -패딩부분을 뺀 곳까지만 배경색//padding-box:border제외하고 배경색 칠함
+		/border-box:보더까지 칠함(주로 투명배경일때 경계선에서 티가나서 사용을한다)*/}
+		
+		 /*div 안에 있는 p에만 적용*/
+		 div>p {color:red; font-weight: bold;} 
+		 /* >를 넣어주면 딱 그 자손에만 적용, 자손의 자손의자손의..는 적용이안됨/ 만약에 전부 적용해야한다면 >(꺽쇠)는 쓰지말것 */
+		 /* +를 넣어주면 바로 다음의 형제에게 적용 */
+		 h4+p{
+		 color:blue;}
+		 /*nth-child(3) 같은것중에 몇번째인지*/
+		 ul>li:nth-child(3) {
+			color:green;
+		 }
+		</style>
+	</head>
+	<body>
+		<p>div 바깥에 있는 p입니다.</p>
+		<div>
+			<h4>타이틀</h4>
+			<p>타이틀에 대한 설명</p>
+			<ul>
+				<li>구글</li>
+				<li>다음</li>
+				<li>네이버</li>
+				<li>네이트</li>
+				<li>야후<p>야후는 일본꺼</p></li>
+			</ul>
+			<p>타이틀 이해</p>
+		</div>
+	</body>
+</html>

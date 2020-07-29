@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.min.js"></script>
+		
+		<style type="text/css">
+		@import url(https://weloveiconfonts.com/api/?family=entypo);
+
+		/* zocial */
+		[class*="entypo-"]:before {
+ 		 font-family: 'entypo', sans-serif;
+		}
+		
+		*{margin: 0;
+		padding: 0;}
+		div{
+		width:300px;
+		height: 300px;
+		margin: 300px auto;
+		border: 1px solid black;
+		/*perspective:700px;*/}
+		p{
+		width:300px; height: 300px;
+		color:blue; text-align:center;
+		background-color:yellow;
+		transition-duration:all 2s;
+		animation:aaa 1s normal 3 ease;
+		}
+		p:hover{
+		transform-origin:left top;
+		transform:rotate(360deg);
+		/*
+		transform:translateX(50px);
+		transform:scale(2) skew(45deg);
+		transform-origin:top left;
+		opacity: 0.5;*/
+		}  
+		@keyframes aaa{
+		0%{transform:scale(1)}
+		100%{transform:scale(3)}
+		}
+		</style>
+	</head>
+	<body>
+	
+		<div>
+			<p></p>
+			<span class="entypo-arrows-ccw"></span>
+		</div>
+	</body>
+</html>

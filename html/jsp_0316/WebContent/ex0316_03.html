@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/prefixfree.dynamic-dom.min.js"></script>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 200px;
+	background: blue;
+	/*trnasition-property:all;
+	width바꾸는시간, height바꾸는 시간
+	transition-duration:2s,1s;*/
+}
+
+#d01 {
+	background: yellow;
+	animation-name:ch_back;
+	animation-duration:3s;
+	animation-direction:alternate;
+	/*무한반복*/
+	animation-iteration-count:infinite;
+	animation:ch_back 3s alternate infinite;
+	/*transition-timing-function: linear;*/
+}
+@keyframes ch_back{
+	from{
+		background:yellow;
+	}
+	50%{
+	transform:translate(500px,500px);
+	background:blue;
+	}
+	to{
+		background:maroon;
+		border-radius:50%;
+		transform:scale(5.0);
+	}
+}
+@keyframes ch_back2{
+	from{
+	}
+	to{
+		transform:rotate(85deg);
+	}
+}
+
+
+/*#d01:hover{width:300px;}
+#d02 {
+	background: aqua;
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: ease-in;
+}
+#d02:hover{width:300px;}
+
+#d03 {
+	background: fuchsia;
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: ease-out;
+}
+#d03:hover{width:300px;}
+#d04 {
+	background:maroon;
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: ease-in-out;
+}
+#d04:hover{width:300px;}
+#d05 {
+	background: teal;
+	transition-duration: 3s;
+	transition-delay:0.5s;
+	transition-timing-function: ease;
+}
+#d05:hover{width:300px;}
+/*
+div:hover {
+	/*이동
+	transform:translate(50px,50px);
+	/*크게
+	transform:scale(1.2);
+	/*회전 rotate(45deg) rotateX(180deg) rotate3d(0,300,0,45deg)*/
+	/*평행사변형 만들기
+	/*transform:skewX(-45deg);
+	/*바뀌는 기준점위치
+	transform-origin: right top;
+	height: 200px;
+	border-radius: 120px;
+	background: indigo;
+}*/
+</style>
+</head>
+<body>
+	<div id="d01"></div>
+	<!-- <div id="d02"></div>
+	<div id="d03"></div>
+	<div id="d04"></div>
+	<div id="d05"></div> -->
+</body>
+</html>

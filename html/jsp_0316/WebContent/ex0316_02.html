@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		/*div{width:160px; height: 160px;
+		border-radius: 0px;
+		border: 1px solid black;
+		background: url("images/mini.png") no-repeat;}
+		div:hover{
+		border-radius: 80px;
+		box-shadow: 0 6px 20px #999999;
+		}*/
+		/*absolute부모기준 relative가 부모에게없으면 그것의 부모가 기준이 되어버린댜*/
+		*{margin:0; padding: 0;}
+		div{width:1000px; height: 1000px; border: 1px solid black;}
+		#big{position: relative; top:100px;}
+		.small{width:50px; height: 50px; background-color: orange;}
+		#t_left{left:0; top:0;position:absolute;}
+		#t_right{right:0; top:0;position:absolute;}
+		#center{top:100px;left: 100px;position:absolute;}
+		#b_left{left:0; bottom:0;position:absolute;}
+		#b_right{right:0; bottom:0;position:absolute;}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+		
+		<div id="t_left" class="small"></div>
+		<div id="t_right" class="small"></div>
+		<div id="center" class="small"></div>
+		<div id="b_left" class="small"></div>
+		<div id="b_right" class="small"></div>
+		
+		
+		
+		
+		</div>
+	</body>
+</html>
