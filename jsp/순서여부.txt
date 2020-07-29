@@ -1,0 +1,11 @@
+list >> 순서o 중복o
+set >> 순서x 중복x
+--->iterator()를 호출하여 사용
+-->hasNext() 다음요소가 있는지 확인
+-->next() 출력
+
+>>>>getParameterNames()과 세션-로그인유지여부결정-은 순서가 없어서 set처럼 돌려야한다리
+
+(Enumeration으로 반환된당 // hasMoreElement() // NextElement().toString()
+
+>>ex0403_05.jsp

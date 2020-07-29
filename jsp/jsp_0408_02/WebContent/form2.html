@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check(){
+		var name_ch=/^[가-힣]{1,}$/;
+		var id_ch=/^[a-zA-Z][a-zA-Z0-9](?=.*[a-zA-Z])(?=.*[0-9]).{3,}$/;
+		var pw_ch=/^[a-zA-Z0-9!@#$%^*()\-_=+\\\|\[\]{};:\\,.<>\/?](?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\\,.<>\/?]).{3,}$/;
+		//이름
+		if(join.name.value==""){
+			alert('이름을 입력하세오');
+			join.name.focus();
+			return false;
+		}
+		
+		if(!(name_ch.test(join.name.value))){
+			alert('이름은 국문으로만 입력가능합니다');
+			join.name.focus();
+			return false;
+		}
+		
+		//아뒤
+		if(join.id.value==""){
+			alert('아이디를 입력하세오');
+			join.id.focus();
+			return false;
+		}
+		if(!(id_ch.test(join.id.value))){
+			alert('아이디는 대소문자 1개,숫자 1개가 포함되어있어야합니다.');
+			join.id.focus();
+			return false;
+		}
+		//비번
+		if(join.pw.value==""){
+			alert('비밀번호를 입력하세오');
+			join.pw.focus();
+			return false;
+		}
+		if(!(pw_ch.test(join.pw.value))){
+			alert('비밀번호는 특수문자와,숫자 1개가 포함되어있어야합니다.');
+			join.pw.focus();
+			return false;
+		}
+		if(join.pw1.value==""){
+			alert('비밀번호 확인을 입력하세오');
+			join.pw1.focus();
+			return false;
+		}
+		var a=join.pw.value;
+		var b=join.pw1.value;
+		if(a!=b){
+			alert('비밀번호 확인이 일치하지 않습니다.');
+			join.pw1.focus();
+			return false;
+		}
+		if(join.gender.value==""){
+			alert('성별을 선택하세오');
+			join.gender.value="male";
+			return false;
+		}
+		
+		if(join.address.value==""){
+			alert('주소를 선택하세오');
+			return false;
+		}
+		
+		
+		return join.submit();
+	}
+
+
+</script>
+</head>
+
+<body>
+<!-- 이름 아이디 패스워드 패스워드확인 성별,주소 -->
+<!-- ex0408_03.jsp에서 출력 -->
+<form action="ex0408_03.jsp" method="post" name="join">
+	이름<input type="text" name="name"><br>
+	아이디<input type="text" name="id"><br>
+	패스워드<input type="password" name="pw"><br>
+	패스워드 확인<input type="password" name="pw1"><br>
+	<p>성별</p>
+	<input type="radio" name="gender" value="male">남성 
+	<input type="radio" name="gender" value="female">여성 <br>
+	<p>주소</p>
+	<select name="address">
+	<option value="" selected="selected" hidden="hidden" disabled="disabled">주소를 선택해주세오</option>
+	<option value="seoul">서울</option>
+	<option value="gyeonggi">경기</option>
+	<option value="inchean">인천</option>
+	<option value="busan">부산</option>
+	<option value="jeju">제주</option><br>
+	</select>
+	<input type="button" onclick="check()" value="전송" class="btn"><input type="reset" value="취소" class="btn">
+
+</form>
+
+
+
+</body>
+</html>

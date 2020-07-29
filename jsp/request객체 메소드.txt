@@ -1,0 +1,15 @@
+request객체 메소드
+
+getContextPath() << 프로젝트명
+getServerName() << local host
+getServerPort() << 8181
+getMethod() << post인지get인지 넘어오는 방식을 알아낼수있음
+getSession() << 세션객체
+getProtocol() << 프로토콜을 확인
+getRequestURL() << url을 확인
+getRequestURI() << uri을 확인 (서버 포트 빼고 뒤의 주소
+
+getQueryString() << 프로토콜을 확인
+getRemoteadd() << ip주소를 얻어옴
+
+ 

@@ -1,0 +1,125 @@
+방법>>1, 다운받음 >2. 수정하고 저장 
+
+
+3.> 상태확인 
+$ git status
+
+
+4.>추가?
+$ git add text.html
+
+5.>커밋내용 추가
+$ git commit -m "세번째수정"
+
+6.>이메일로그인
+$ git config --global user.email "timtam0399@naver.com"
+
+7.>이름확인
+$ git config --global user.name "angmu"
+
+8. 다시 커밋 추가
+$ git commit -m "세번째 수정"
+
+
+9. 파일업로드
+$ git push origin master
+
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)  <<올릴 파일의 위치인거같다.
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .project
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git stuats
+git: 'stuats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .project
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git add test.html
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .project
+
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git commit -m "세번째 수정"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@user-PC.(none)')
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git config --global user.email "timtam0399@naver.com"
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git config --global user.name "angmu"
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git commit -m "세번째 수정"
+[master a542d90] 세번째 수정
+ 1 file changed, 1 insertion(+)
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Mssuk/koitt03_web_1.git
+   9675b1e..a542d90  master -> master
+
+user@user-PC MINGW64 ~/Desktop/koitt03_web_1 (master)
+
+
+git pull  , git add -> git commit -> git push 

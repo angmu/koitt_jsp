@@ -1,0 +1,28 @@
+*객체>>자바빈 --class
+-->>ex0408_01.jsp ,ex0408_02.jsp,form.html
+
+(카드에서 Card()클래스 --kind와 number는 데이터이다)
+private으로 만들고 getter와 setter를 생성해둔다.
+<jsp:useBean id="s" class="com.javalec.ex.Student" scope="page"/>
+
+>scope
+1.page 현재페이지내
+2.request 요청된페이지내
+3.session 세션의 생명주기만큼
+4.application 모든곳
+
+아래처럼 써도상관은없지만 위처럼 빈(Bean)형태로 쓰는경우가 많다.
+<%
+	Student s =new Student();
+ %>
+ 
+ ----------------------------------------------------------------------
+ 
+ request.getParameter처럼 form의 내용을 받을수도 있음
+ (단 폼의 name과 빈의 변수이름을 같게해야한다.
+ 같은 이름을 찾아서 알아서 입력값을 value로 자동으로 넣어주기 때문에
+ setProperty에서 value값을 별도로 안써도된다 :3
+ --------------------------------------------------------------------------------------------------------
+ 
+ 
+ 실습 >form2.html ,ex0408_03.jsp

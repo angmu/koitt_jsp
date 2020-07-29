@@ -1,0 +1,20 @@
+*세션
+
+*쿠키와 비슷
+>>서버상에 객체로 존재하게 된다
+(Object)
+보안↑ (용량, 개수도 무제한이다)
+
+
+*처리과정>>
+클라이언트 요청>>세션 자동생성>>세션속성 설정
+
+세션 문법!
+
+setAttribute() 데이터 저장
+getAttrubuteName() 세션에 저장된 데이터 이름을 얻음(iterator 형태로 반환)
+getId() 자동생성된 세션의 유니크한 아이디를 얻음
+isNew() 신규페이지 인지 확인
+getMaxInactiveInterval() 세션으ㅔ 유효기간 확인
+removeAttrite특정데이터 파괴
+emoveAttrite특정데이터 파괴

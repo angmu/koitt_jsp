@@ -1,0 +1,6 @@
+form3.html ▶  join_ok.jsp
+			Bean 값 저장 ▶  DB
+				▼
+login.html	◀ index.jsp
+				▼
+			login_ok.jsp
