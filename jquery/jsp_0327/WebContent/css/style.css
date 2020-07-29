@@ -1,0 +1,4 @@
+@charset "UTF-8";
+#init{width:200px; height: 30px; font-size: 20px;display: inline-block;}
+div{border: 1px solid black;text-align:left;width: 100%; }
+div img{cursor: pointer;position: relative;width: 550px; }

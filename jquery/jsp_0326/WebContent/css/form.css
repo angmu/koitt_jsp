@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body{
+	font-size: 20px;
+}
+input{
+	margin: 20px;
+}
+li{
+	margin: 10px;
+}

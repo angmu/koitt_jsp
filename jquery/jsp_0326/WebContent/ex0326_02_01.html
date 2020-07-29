@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			img {width:200px;}
+		</style>
+		<script type="text/javascript">
+			function en(){
+				document.getElementById('image').style.width="600px";
+			};
+			function back(){
+				document.getElementById('image').style.width="200px";
+			};
+		</script>
+	</head>
+	<body>
+		<img src="images/s01.jpg" id="image" alt=""><br>
+		<button onclick="en()">이미지 확대 600</button><br>
+		<button onclick="back()">이미지 원래대로</button>
+	</body>
+</html>

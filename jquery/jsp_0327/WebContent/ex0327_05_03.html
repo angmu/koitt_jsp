@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>animate</title>
+<!-- 		<link type="text/css" rel="stylesheet" href="css/style.css"> -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.js"></script>
+<!-- 		<script type="text/javascript" src="js/custom.js"></script> -->
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		
+		<style>
+		@charset "UTF-8";
+		body{width:100%;}
+		div{width:600px;margin:50px auto;}
+		img {width:600px; border: 3px solid black; }
+		#d01{width:300px; height: 300px; border:1px solid black;background: yellow;position: relative;}
+
+		
+		</style>
+		<script type="text/javascript">
+		/**
+		 * 이미지의 소스를 변경하여 이미지를 변경한다리 :D
+		 * 
+		 */
+		$(document).ready(function(){
+			//애니메이트때 컬러 변경을 원한다면 jqueryui를 설치해야함 ( background-color 로만 먹힌다리..
+			
+//			click시 애니메이트
+			$("#btn01").click(function(){
+				$("#d01").stop().animate({
+					"width":"100px","background-color":"red","border-radius":"300px"
+				});
+			});
+			$("#btn02").click(function(){
+				$("#d01").stop().animate({
+					"width":"200px","background-color":"blue","border-radius":"50px"
+				});
+			});
+			$("#btn03").click(function(){
+				$("#d01").stop().animate({
+					"width":"300px","background-color":"yellow","border-radius":"0px"
+				});
+			});
+			
+			
+			
+			
+//			$("img").mouseenter(function(){
+//				$("img").stop().animate({
+//					"width":"100px"
+//				});
+//			});
+//			$("img").mouseleave(function(){
+//				//animate({"":"","":""})
+//				//{},8000)이런식으로 {}밖에 숫자를 쓰면 시간이다 :ㅇ
+//				$("img").stop().animate({
+//					"width":"600px"
+//				});
+//			});
+			
+			//click시 애니메이트
+//			$("#btn01").click(function(){
+//				$("img").stop().animate({
+//					"width":"100px"
+//				});
+//			});
+//			$("#btn02").click(function(){
+//				$("img").stop().animate({
+//					"width":"200px"
+//				},8000);
+//			});
+//			$("#btn03").click(function(){
+//				$("img").stop().animate({
+//					"width":"300px"
+//				});
+//			});
+		});
+		</script>
+	</head>
+	<body>
+		<div>
+			<img alt="도시이미지" src="images/img01.jpg">
+			<p>버튼을 클릭하면 이미지 크기가 변경됩니다.</p>
+			<button id="btn01">이미지 100px</button>
+			<button id="btn02">이미지 200px</button>
+			<button id="btn03">이미지 300px</button>
+		</div>
+		<div id="d01"></div>
+	</body>
+</html>

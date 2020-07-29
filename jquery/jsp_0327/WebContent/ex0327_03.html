@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<style>
+		#d01{width:300px; height: 300px;background: yellow;border: 2px solid red;margin: 30px auto;}
+		#d02{width:500px; height: 500px;background: green;border: 2px solid black;margin: 30px auto;}
+		p{font-size:20px;}
+		</style>
+		<script type="text/javascript">
+		$("#d02").click(function(){
+			//width >>가로길이
+			var w1=$("#d02").width();
+			//()안에 변수를 넣으면 그 값을. 숫자를 넣으면 px 단위로, 빈칸은 그냥 현재값을 읽는다.
+			$("#d01").width(w1);
+			$("#d01 p").text("div의 크기가 변경되었습니다.");
+		});
+		</script>
+	</head>
+	<body>
+		<div id="d01">
+			<p></p>
+		</div>
+		<div id="d02">
+			<p></p>
+		</div>
+	</body>
+</html>

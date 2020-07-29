@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>.mousemove</title>
+<!-- 		<link type="text/css" rel="stylesheet" href="css/style.css"> -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.js"></script>
+<!-- 		<script type="text/javascript" src="js/custom.js"></script> -->
+		<style>
+		@charset "UTF-8";
+*{margin: 0;padding: 0;}
+body{height: 2000px;}
+div{width:300px;height:300px; border: 3px solid #efefef;box-sizing: border-box;}
+
+.on {border-bottom: 3px solid #ff5a2b;background: #efefef;cursor: pointer;}
+img{width:200px;}
+
+
+		
+		</style>
+		<script type="text/javascript">
+		/**
+		 * 이미지의 소스를 변경하여 이미지를 변경한다리 :D
+		 * 
+		 */
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				var scNum=$(this).scrollTop();
+				$("p").eq(0).text("스크롤 높이: "+scNum);
+				$("div").eq(0).css({"position":"fixed"});
+			});
+			//e >>마우스 포인터 위치를 매개변수로 받는다는 뜻
+			//마우스를 따라다니는 것을 만들수 있다리 :D
+			$(window).mousemove(function(e){
+				var x=e.pageX;
+				var y=e.pageY;
+				$("p").eq(1).text("x좌표: "+x);
+				$("p").eq(2).text("y좌표: "+y);
+				if(x>=0&&x<=300){
+					$("div").eq(1).css({"background":"yellow"});
+				} 
+				if(x>=301&&x<=600){
+					$("div").eq(1).css({"background":"blue"});
+				}
+				if(x>600){
+					$("div").eq(1).css({"background":"green"});
+				 }
+				 if(y>=0&&y<=300){
+					$("div").eq(2).css({"background":"url('images/img01.jpg')"}); 
+				 }
+				 if(y>=301&&y<=600){
+					$("div").eq(2).css({"background":"url('images/img02.jpg')"});
+				 }
+				 if(y>600){
+					$("div").eq(2).css({"background":"url('images/img03.jpg')"});
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div id="d01">
+		<p>스크롤 높이 :0</p>
+		<p>x좌표 :0</p>
+		<p>y좌표 :0</p>
+		</div>
+		<div></div>
+		<div></div>
+		<button id="btn01">메뉴밑줄 넣기</button>
+<!-- 		<button id="btn02">메뉴밑줄 빼기</button> -->
+	</body>
+</html>

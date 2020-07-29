@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>d</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/prefixfree.dynamic-dom.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		
+		<style>
+		@charset "UTF-8";
+		div{width:800px;height:30px; padding-top:10px; margin:0px auto;text-align: center;border: 1px solid #c3c3c3;background:#edd738;}
+		#slide{cursor: pointer;}
+		
+		#panel{background: #efefef;height: 200px;cursor: pointer;}
+		
+		</style>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#panel").hide();
+			
+			$("#slide").click(function(){
+				$("#panel").stop().slideDown(2000);
+			});
+			$("#panel").click(function(){
+				$("#panel").stop().slideUp(2000);
+			});
+			$("#flip").click(function(){
+				$("#panel").stop().slideToggle(2000);
+			});
+			$("#stop").click(function(){
+				$("#panel").stop();
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<button id="stop">멈춤버튼</button>
+		<div id="slide">[오늘의 공지사항]</div>
+		<div id="panel">오늘은 제이쿼리 프로그램을 학습합니다<br>내용이 어렵다면 당근을 흔들어주세오</div>
+		<div id="flip">toggle slide</div><br>
+	</body>
+	
+</html>
