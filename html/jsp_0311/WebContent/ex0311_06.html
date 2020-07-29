@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		*{margin:0;padding:0;}
+		div{width:272px;padding: 200px 0px 10px;
+		margin:0 auto;}
+		form{width:449px;margin:0 auto;}
+		#search{width:449px; height: 44px; padding: 1px 0px 1px 20px;border-radius: 10px;border-style:ridge;}
+		.circle{width:100px;height:100px;background: #f37320;padding:0 0 0 0; margin-top:50px;
+		border-radius:150px; }
+		
+		</style>
+	</head>
+	<body>
+		<div>
+			<img alt="구글" src="images/google.png">
+		</div>
+		<form action="http://www.google.com/search" method="get">
+		
+			<input id="search" type="text" placeholder="Google 검색 또는 url입력">
+		
+		</form>
+		<div class="circle">
+		</div>
+		
+		<form action="http://www.naver.com" name="" method="get">
+			<label>아이디</label><input type="text" name="m_id"><br>
+			<label>패스워드</label><input type="password" name="m_pw"><br>
+			<!-- readonly 읽기만 가능 -->
+			<label>레벨</label><input type="text" name="level" value="vip회원" readonly="readonly"><br>
+			<label>이메일</label><input type="email" name="m_mail"><br>
+			<label></label><input type="hidden" name="ip" value="192.168.0.170">
+			<br>
+			<input type="submit" value="전송">&nbsp;
+			<input type="reset" value="취소">     
+			
+		</form>
+		
+		
+	</body>
+</html>

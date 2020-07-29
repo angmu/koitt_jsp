@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>비발디파크</title>
+	<style>
+	h4 {
+		font-size: 20px;
+		color: #333333;
+		/*바깥여백 위 오른 아래 왼 순서로 적용*/
+		margin:50px 0px 0px;
+	}
+	div{width:1000px} /*같은 100%라도 span태그(<<div처럼 박스이다!!)안의 문장은 단어단위로 가로 사이즈에 맞춰진다.*/
+	/**ul{list-style-type:square; } disc (속이 꽉찬 원) circle (구멍뚫린 원) square (네모) none*/
+	#s01{list-style-type:disc;}
+	#s02{list-style-type:circle;}
+	#s03{list-style-type:square;}
+	#s04{list-style-type:none;}
+	img{margin-right:10px;padding-bottom:5px;} /**마진은 바깥에 여백, padding은 안쪽여백*/
+	</style>
+</head>
+<body>
+	<!-- q는 인용태그 ""가 자동생성-->
+	<p><q cite="https://www.daemyungresort.com/daemyung.vp.accomodation.01_02.ds/dmparse.dm">비발디파크 홈페이지에서 내용을 가지고 왔습니다</q></p>
+	<div>
+	<!-- 순서가 있는 목록  type을 바꾸면 1,2,3이아닌 모양도 나온다-->
+	<ol type="A">
+		<li>구글</li>
+		<li>네이버</li>
+		<li>네이트</li>
+		<li>다음</li>
+	</ol>
+	<ol type="a">
+		<li>구글</li>
+		<li>네이버</li>
+		<li>네이트</li>
+		<li>다음</li>
+	</ol>		
+	<ol type="I">
+		<li>구글</li>
+		<li>네이버</li>
+		<li>네이트</li>
+		<li>다음</li>
+	</ol>	
+	<!-- ol에 시작순서(start)를 저장할 수 있다. reverse 하면 역순으로 표기 -->
+	<ol start="8">	
+		<li>위메프</li>
+		<li>지마켓</li>
+		<li>옥션</li>
+	</ol>
+	
+	<!-- 순서가 없는 목록 //사이간격등을 조절하기 쉬워서 상단메뉴를 이걸로 대부분 만든다-->
+	<ul id="s01">
+		<li>구글</li>
+		<li>네이버</li>
+		<li>네이트</li>
+		<li>다음</li>
+	</ul>
+	<ul id="s02">
+		<li>※ 침구추가 안내</li>
+		<li>리조트 : 침구류 추가 요청 시, <mark>1박당 11,000원의 추가비용</mark>이 발생합니다.(VAT포함)</li>
+		<li>침구 추가는 최대 추가인원 수를 초과할 수 없습니다.</li>
+		<li>호 텔 : 침구류 추가 및 엑스트라베드가 미 운영 되오니 참고바랍니다.</li>
+		<li>8세 미만의 추가인원은 추가요금에서 제외됩니다.</li>
+	</ul>
+	
+	<ul id="s03">
+		<li>※ 타올추가 안내</li>
+		<li>리조트의 경우 1박 투숙 시 객실 정원수만큼 제공되며, 추가 요청 시 1장당 500원의 환경단체 기부금이 발생합니다.</li>
+	</ul>
+	<ul id="s04">
+		<li><img src="images/squar_bullet.gif">객실 정비안내 Cleaning Service</li>
+		<li><img src="images/squar_bullet.gif">리조트 : 객실 3박 이상 투숙시 무료 재실정비가 1회 진행됩니다.(오후 3시 이전 사전 요청 필수)</li>
+		<li><img src="images/squar_bullet.gif">3박미만 리조트 객실에 대하여 재실정비는 운영하지 않습니다.</li>
+		<li><img src="images/squar_bullet.gif">단, 노블리안 객실은 고객 사정 및 사안에 따라 요청 시 유상정비로 진행됩니다.</li>
+		<li><img src="images/squar_bullet.gif">* 실버스위트, 골드스위트 : 55,000원 / 로얄스위트 : 77,000원</li>
+		<li><img src="images/squar_bullet.gif">호 텔 : 객실 1박 이상 투숙시 무료 재실정비가 1회 진행됩니다.</li>
+		<li><img src="images/squar_bullet.gif">※ 1박 후 외출시 09 ~ 16시내 객실내 방문하여 정비를 도와 드리며</li>
+		<li><img src="images/squar_bullet.gif">정비 및 방문을 원치 않으시는 고객님께서는 객실내 [DO NOT DISTURB] 버튼을 눌러주시기 바랍니다.</li>
+	</ul>
+	
+	
+	<!-- - -->
+	
+	<p>※ 침구추가 안내<br>
+	<!-- mark 형광펜 칠하기 -->
+	리조트 : 침구류 추가 요청 시, <mark>1박당 11,000원의 추가비용</mark>이 발생합니다.(VAT포함)<br> 
+	침구 추가는 최대 추가인원 수를 초과할 수 없습니다.<br>
+	호 텔 : 침구류 추가 및 엑스트라베드가 미 운영 되오니 참고바랍니다.<br>
+	8세 미만의 추가인원은 추가요금에서 제외됩니다.
+	<br>
+	</p>
+	<p>
+		※ 타올추가 안내<br>
+		리조트의 경우 1박 투숙 시 객실 정원수만큼 제공되며, 추가 요청 시 1장당 500원의 환경단체 기부금이 발생합니다.
+	</p>
+	<h4>객실 정비안내 Cleaning Service</h4>
+	<p>
+		리조트 : 객실 3박 이상 투숙시 무료 재실정비가 1회 진행됩니다.(오후 3시 이전 사전 요청 필수)<br>
+		<!-- 들여쓰기태그 -->
+		<blockquote>3박미만 리조트 객실에 대하여 재실정비는 운영하지 않습니다.<br> 단, 노블리안 객실은 고객 사정 및 사안에 따라 요청 시 유상정비로 진행됩니다.</blockquote><br> 
+		* 실버스위트, 골드스위트 : 55,000원 / 로얄스위트 : 77,000원<br>
+		<br> 호 텔 : 객실 1박 이상 투숙시 무료 재실정비가 1회 진행됩니다.<br>
+		※ 1박 후 외출시 09 ~ 16시내 객실내 방문하여 정비를 도와 드리며<br>
+		정비 및 방문을 원치 않으시는 고객님께서는 객실내 [DO NOT DISTURB] 버튼을 눌러주시기 바랍니다.
+	</div>
+	</p>
+
+
+</body>
+</html>

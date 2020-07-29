@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		ul{
+		list-style-type:decimal;}
+		/*inline방식은 원래 가로 세로값을 줄수없지만 inline-block으로 하면 왼쪽 붙는 배치+가로세로 값을 지정가능하다.*/
+		div{width: 300px;height: 300px;display: inline;
+		}
+		span{width: 300px;display: inline-block;
+		}
+		#d01{
+		background: red;}
+		#d02{
+		background: green;}
+		#d03{
+		background: blue;}
+		#s01{
+		background: yellow;}
+		#s02{
+		background: black;}
+		#s02:hover{
+		display: none;}
+		#s03{
+		background: olive;}
+		</style>
+	</head>
+	<body>
+		<div id="d01">div1</div>
+		<div id="d02">div2</div>
+		<div id="d03">div3</div>
+		<span id="s01">span1</span>
+		<span id="s02">span2</span>
+		<span id="s03">span3</span>
+	
+		<ul>
+			<li>구글</li>
+			<li>네이버</li>
+			<li>다음</li>
+			<li>네이트</li>
+		</ul>
+	</body>
+</html>

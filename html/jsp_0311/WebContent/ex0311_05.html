@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네이버 로그인</title>
+</head>
+<body>
+	<!--action >>전송 누를때 보낼서버  -->
+	<!--method방식을 get으로 전송하면 주소창에 정보가 노출이 된다. 그래서 안보이게 post로 보내야함.-->
+	<form name="login" action="http://www.naver.com" method="post">
+	
+		<!-- 필드셋 --폼태그에 여러박스를 만들고싶을때 사용 -->
+	<fieldset>
+		<!-- 필드셋의 제목 -->
+		<legend>로그인정보</legend>
+		<!-- required-필수입력사항이라는 뜻, 없으면 전송안되게 막음 -->
+		<!-- placeholder 안내문구 (입력 혹은 클릭시 사라짐) -->
+		<label for="m_id">아이디</label><input type="text" id=m_id name="member_id" required="required" placeholder="아이디는 8자 이상으로 입력하세요"><br>
+		<!-- autofocus >>실행하자마자 커서위치 설정 -->
+		패스워드<input type="password" name="member_pw"required="required" autofocus="autofocus"><br>
+		<!-- maxlength>>입력하는 글자의 최대개수 지정//최소개수minlength -->
+		<!-- size>> 입력칸의 길이를 지정 -->
+		<!-- label 사용법 >>방법1.글자랑 폼을 같이 라벨안에 넣는다/방법2.버튼이 될 글자에만 라벨적용후 적용하고픈 input타입의 id를 for로 연결 -->
+		<label>주민번호<input type="text" name="jumin" maxlength="13" size="5"></label>
+		
+		<input type="submit" value="전송">&nbsp;
+		<input type="reset" value="취소">
+	
+	
+	</fieldset>
+	
+	
+	</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	width: 800px;
+	margin: 0 auto;
+	height: 22px;
+	padding: 50px 0 20px;
+	border-bottom: 2px solid #333;
+	font-size: 22px;
+}
+
+span {
+	color: #444444;
+	font-size: 18px;
+	font-weight: bold;
+	width: 600px;
+	display: inline-block;
+}
+
+ul {
+	list-style-type: none;
+	width: 800px;
+	margin: 0 auto;
+}
+
+li {
+	height: 50px;
+	font-size: 18px
+}
+
+.mini {
+	width: 50px;
+}
+
+#gender {
+	width: 173px;
+}
+
+.month {
+	width: 54px;
+	padding-top: -5px;
+}

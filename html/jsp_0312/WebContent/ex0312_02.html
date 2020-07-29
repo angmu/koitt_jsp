@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="http://www.naver.com" name="sub" method="get">
+			<fieldset>
+				<legend>신청과목</legend>			
+				<p>이 달에 신청할 과목을 선택하세요(1과목만 가능)</p>
+				<!-- 선택 1개 가능한것 radio (이름-변수명-이 다 같아야 한다)-->
+				<input type="radio" name="subject" id="speaking" value="회화" checked="checked">회화&nbsp;&nbsp;
+				<input type="radio" name="subject" id="grammar" value="문법">문법&nbsp;&nbsp;
+				<input type="radio" name="subject" id="writing" value="작문">작문
+			</fieldset>
+			
+			<fieldset>
+				<legend>메일링</legend>
+				<!-- 선택을 여러개 가능한것 checkbox (name-변수명-이 다 달라야 한다/value-값(지정된게 없다면 입력된 값이 value가 된다.)
+				<<위의 2개(name,value)는 프로그램이 넘어갈때 사용//id=html에서 사용하는 주소값.-->
+				<input type="checkbox" name="mailing1" id="mail1" value="news"><label for="mailing1">해외 단신</label>&nbsp;
+				<input type="checkbox" name="mailing2" id="mail2" value="dialog"><label for="mailing2">5분회화</label>&nbsp;
+				<input type="checkbox" name="mailing3" id="mail3" value="pops"><label for="mailing3">모닝팝스</label>&nbsp;
+			</fieldset>
+			
+			<fieldset>
+				<legend>달력</legend>
+				<!-- 주로 date만 사용한다. //name이 없으면 data값이 안넘어감 -->
+				<input type="date" name="date">
+				<input type="month" name="month">
+				<input type="week" name="week">
+			</fieldset>
+			<fieldset>
+				<legend>시간</legend>
+				<input type="time" name="time" value="09:00">
+			</fieldset>
+			<fieldset>
+				<legend>선택</legend>
+				<!-- 드롭다운메뉴 -->
+				<label for="major">학과선택</label>
+				<select name="major" id="major">
+					<option value="archi" selected="selected">건축공학과</option>
+					<option value="mechanic">기계공학과</option>
+					<option value="indust">산업공학과</option>
+					<option value="elec">전기전자공학과</option>
+					<option value="computer">컴퓨터공학과</option>
+					<option value="chemical">화학공학과</option>
+				</select>
+				<label for="name2">이름</label><input type="text" autofocus="autofocus" id="name2" name="name2" required="required" placeholder="이름을 입력하세요">
+				<label>전화번호</label><input type="text" value="010-9999-8888" readonly="readonly">
+			</fieldset>
+			
+			<!--<input type="submit" value="전송">-->
+			<!-- button >>알아서 form의 action으로 넘어가 데이터를 전송하며, css에서 모양잡기가 편함 -->
+			<button>전송</button>
+			
+		</form>
+	</body>
+</html>

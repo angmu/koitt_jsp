@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+		<style type="text/css">
+		ul{
+		list-style-image: url("images/squar_bullet.gif");
+		}
+		</style>
+	</head>
+	<body>
+		<div id=wrap>
+		<h2>이용약관 동의(필수)</h2>
+			<form action="" name="" method="get">
+			<ul>
+				<li>
+					<span>남양아이닷컴 이용약관</span>
+					<input type="radio" name="radio1" value="yes"><label>동의</label>&nbsp;&nbsp;
+					<input type="radio" name="radio1" value="no"><label>비동의</label>
+				</li>
+				<li>
+					<span>개인정보보유 및 이용기간 선택</span>
+					<input type="radio" name="radio2" value="1"><label>1년</label>&nbsp;&nbsp;
+					<input type="radio" name="radio2" value="3"><label>3년</label>&nbsp;&nbsp;
+					<input type="radio" name="radio2" value="5"><label>5년</label>
+				</li>
+				<li>
+					<span>비밀번호</span>
+					<input type="password" name="pw" required="required">
+				</li>
+				<li>
+					<span>비밀번호 확인</span>
+					<input type="password" name="pw2" required="required">
+				</li>
+				<li>
+					<span>이름</span>
+					<input type="text" name="id" required="required">
+				</li>
+				<li>
+					<span>생년월일</span>
+					<input class="mini" type="text" name="year" value="year" placeholder="년(4자)" required="required">
+					<select class="mini month" name="month">
+						<option value="none" selected="selected">월</option>
+						<option value="jen">1</option>
+						<option value="feb">2</option>
+						<option value="mar">3</option>
+						<option value="april">4</option>
+						<option value="may">5</option>
+						<option value="jun">6</option>
+						<option value="jul">7</option>
+						<option value="aug">8</option>
+						<option value="sep">9</option>
+						<option value="oct">10</option>
+						<option value="nov">11</option>
+						<option value="dec">12</option>
+					</select>
+					<input class="mini" type="text" name="day" value="day" placeholder="일" required="required">
+				</li>
+				<li>
+					<span>성별</span>
+					<select name="gender" id="gender">
+						<option value="none" selected="selected">성별</option>
+						<option value="male">남자</option>
+						<option value="female">여자</option>
+					</select>
+ 				</li>
+				<li>
+					<span>본인확인이메일(선택)</span>
+					<input type="text" name="email"  placeholder="선택입력">
+				</li>
+				<li>
+					<span>메모장</span>
+					<textarea rows="7" cols="109"></textarea>
+				</li>
+			</ul>	
+			</form>
+		
+		
+		</div>
+	</body>
+</html>

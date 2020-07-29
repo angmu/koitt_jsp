@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+
+		<style type="text/css">
+		/*스타일 순서 >>지역변수 ->내부 css->외부css*/
+		*{
+		font-family: 'Nanum Myeongjo', serif;
+		margin:0; padding:0;}
+		div{
+		width:1000px;
+		margin:0 auto;
+		}
+		h4{
+		margin:50px 0;
+		font-size:42px;
+		text-align: center;
+		font-family: 'Sunflower', sans-serif;
+		}
+		form{
+		width:650px;
+		margin:0 auto;
+		}
+		input{
+		width:476px;
+		height:60px;
+		margin:0 auto;
+		font-family: 'Sunflower', sans-serif;
+		}
+		label{
+		letter-spacing:-2px;
+		word-spacing: 15px;
+		display:inline-block;
+		width:150px;
+		/*text-decoration:line-through;*/
+		/*오른, 아래만큼 움직*/
+		text-shadow:2px 2px #efefef;
+		text-transform: uppercase;
+		}
+		/*ul{
+		list-style-type:none;}*/
+		li{
+		height: 90px;}
+		.text_import{
+		color:red;font-weight: bold;}
+		#gender{
+		color:pink; font-weight: 900;}
+		#div01{
+		width:300px;
+		height: 300px;
+		background: red;
+		}
+		video{
+		width:100%;}
+		/*#div01:hover{
+			-webkit-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+		}////*/
+		p{
+		width:500px;
+		height:100px;
+		border:1px solid black;
+		overflow:hidden; /*자를때 hidden  스크롤 scroll*/
+		text-overflow:ellipsis;/*넘치는건 ...으로 나온다캄*/
+		
+		/*text-align: justify; /*들쑥날쑥한 것을 좌우간격을 맞춘다.*/
+		}
+		p:hover{
+		overflow: visible;
+		height:300px;
+		}
+		
+		#list01{
+		list-style-image: url("images/squar_bullet.gif");
+		}
+		
+		</style>
+	</head>
+	<body>
+	
+		<ul id="list01">
+			<li> 회원의 권리를 보장하기 위하여 회원 본인 확인 후 회원 본인이 아닐 때에는 회원초청 요금이 적용됩니다.</li>
+			<li> 규정 숙박정원 초과 시 미리 말씀하여 주시면 추가요금을 할인 받으실 수 있습니다.</li>
+		</ul>	
+				
+		<!-- <div id="div01">
+			
+		</div> -->
+		<!-- muted를 안넣으면 실행이 안된다. -->
+		<!--  <video src="video/v02.mp4" controls autoplay muted="muted"></video>-->
+		<div>
+			<h4>회원가입</h4>
+			<form action="" method="get" name="join">
+				<ul>
+					<li><label for="id">아이디(id)</label><input type="text" id="id" name="m_id" placeholder="아이디를 입력해주세요"></li>
+					<li><label for="pw1" class="text_import">비밀번호(password)</label><input type="text" id="pw1" name="m_pw1" placeholder="비밀번호를 입력해주세요"></li>
+					<li><label for="pw" class="text_import">비밀번호확인</label><input type="text" id="pw" name="m_pw" placeholder="비밀번호를 확인해주세요"></li>
+					<li><label for="tel">전화번호(tel)</label><input type="tel" id="tel" name="m_tel" placeholder="전화번호를 입력해주세요"></li>
+					<li><label id="gender" for="gender" class="text_import" >성별</label><input type="text" name="gender" placeholder="성별을 입력해주세요"></li>
+					
+				</ul>
+				
+			</form>
+		</div>
+		<div>
+			<p>
+			하버드에서 똑같은 수업을 들으면서도 자신들은 다른 하버드생들과 다르다고 선 긋는 집단이 있다. 그들은 하버드에서도 가장 폐쇄적인 투자자 집단인 ‘블랙 다이아몬드’다. 그들은 사회가 기대하는 성공 곡선을 따라가지 않는다. 입학 순간부터 월스트리트에 투자하며 워런 버핏의 꿈을 깊게 그려간다. 그리고 그들은 애초부터 다른 씨앗이었던 것처럼 월스트리트에서 화려하게 성공한다. 하버드는 이들을 연구하기 시작했다. 하버드 최고 교육심리학자 하워드 가드너는 ‘블랙 다이아몬드’와 같이 한 분야에 깊게 빠져드는 집단을 지켜보며, 우리가 기존에 알고 있었던 성공의 공식은 잘못되었다고 결론 내린다. 이 책의 저자는 다양한 사례와 연구 내용을 근거로 들며, 부정적 신호에 대한 차단의 중요성을 강조한다. 대부분의 평범한 사람들은 성장하면서 본인을 특별하게 만드는 신호보다는 그저 계속 평범하게 살도록 유도하는 신호를 받게 된다. 평범한 신호를 받는 학생들은 아무도 “내가 똑똑하니까”라고 말하지 않는다. 반대로 “나는 평범하니까”라고 말하는 데 익숙해지는 것이다. 주변의 신호가 1등의 신호가 아니라면 이제 우리는 그 신호부터 차단해야 한다.
+
+그리고 부정적인 신호를 차단한 뒤엔 자신의 분야에 대한 깊은 몰입이 요구된다. 차단과 깊은 이해가 가져다주는 빛 또는 힘. 다시 말해, 블랙 다이아몬드(Black Diamond)=Block(차단)×Deep(깊은 이해). 이것이 바로 저자가 발견한 이 시대의 가장 강력한 성공 공식이다. 부정적인 평을 듣던 야구선수 페드로이아가 슈퍼스타가 될 수 있었던 비결은 무엇일까. 학업 성적이 좋지 않았던 키신저가 불과 몇 년 만에 하버드를 최우수 성적으로 졸업하고 성공의 길을 걸었던 이유, 똑같은 최악의 환경에서 어떤 이는 테러리스트가 되고, 또 다른 이는 하버드 최연소 교수가 될 수 있었던 이유는 무엇일까. 이 책에는 세상의 많은 블랙 다이아몬드들이 새로운 성공을 밝히는 이야기들로 가득하다. 독자들은 사회가 평가한 성적 그대로를 자신의 한계로 생각해왔던 것을 버리고, 신호를 차단할 수 있는 용기와 자신의 분야에 깊어질 수 있는 힘을 가질 수 있을 것이다.
+			
+			</p>
+		
+		
+		</div>
+	</body>
+</html>
